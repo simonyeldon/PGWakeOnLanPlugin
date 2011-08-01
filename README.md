@@ -16,10 +16,12 @@ by Simon Yeldon
 To use the plugin call the function ```window.plugins.wol.wake(macAddress, success, fail);``` somewhere in your JavaScript
 
 ### Example
-```window.plugins.wol.wake("00:00:00:00:00:00", function(success) {
+```javascript
+window.plugins.wol.wake("00:00:00:00:00:00", function(success) {
         console.log("Success: "+success);
     }, function(fail) {
         console.log("There was an error: "+fail);
     }
-);```
+);
+```
 
