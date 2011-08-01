@@ -1,5 +1,8 @@
 # PGWakeOnLanPlugin 
-by Simon Yeldon
+by [Simon Yeldon](http://ghosty.co.uk/PGWakeOnLan)
+
+## About
+PGWakeOnLan is a [PhoneGap](http://www.phonegap.com) plugin that will send a [Wake-on-LAN](http://en.wikipedia.org/wiki/Wake-on-LAN) magic packet to the machine you specify from within your PhoneGap project.
 
 ## Dependancies 
 * iPhone PhoneGap 1.0.0 (http://github.com/phonegap/phonegap-iphone)
