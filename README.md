@@ -38,3 +38,7 @@ window.plugins.wol.wake("00:00:00:00:00:00", function(success) {
 );
 ```
 
+## Acknowledgements
+iOS code inspired heavily by [openwol](http://code.google.com/p/openwol/).
+iOS regex provided by [RegexKitLite](http://regexkit.sourceforge.net/RegexKitLite/index.html).
+Android code inspired by [Jibbler](http://www.jibble.org/wake-on-lan/).
