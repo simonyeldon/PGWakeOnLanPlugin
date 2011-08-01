@@ -2,17 +2,15 @@
 //  WakeOnLan.m
 //  PGWakeOnLan
 //
-//  Created by Simon on 30/07/2011.
-//
 
 #import "WakeOnLan.h"
+#import "RegexKitLite.h"
 
+#ifndef MAC_PATTERN
+#define MAC_PATTERN  (@"^\\s*([0-9A-Fa-f]{2}):([0-9A-Fa-f]{2}):([0-9A-Fa-f]{2}):([0-9A-Fa-f]{2}):([0-9A-Fa-f]{2}):([0-9A-Fa-f]{2})\\s*$")
+#endif
 
 @implementation WakeOnLan
-
-const NSString* MAC_PATTERN = @"^\\s*([0-9A-Fa-f]{2}):([0-9A-Fa-f]{2}):([0-9A-Fa-f]{2}):([0-9A-Fa-f]{2}):([0-9A-Fa-f]{2}):([0-9A-Fa-f]{2})\\s*$";
-
-
 
 - (void) wake:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
 {
@@ -37,11 +35,8 @@ const NSString* MAC_PATTERN = @"^\\s*([0-9A-Fa-f]{2}):([0-9A-Fa-f]{2}):([0-9A-Fa
 -(BOOL) checkMACFormat:(NSString*)macAddress
 {
 	NSLog(@"Calling checkMacFormat");
-		//NSArray* macParts =	[_mac captureComponentsMatchedByRegex:(NSString*)MAC_PATTERN];
-	
-		//return (7 == [macParts count]);
-	return NO;
+	NSArray* macParts =	[macAddress captureComponentsMatchedByRegex:(NSString*)MAC_PATTERN];
+	return (7 == [macParts count]);
 }
-
 
 @end

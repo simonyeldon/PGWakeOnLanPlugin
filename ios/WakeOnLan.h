@@ -2,9 +2,6 @@
 //  WakeOnLan.h
 //  PGWakeOnLan
 //
-//  Created by Simon on 30/07/2011.
-//  
-//
 
 #ifdef PHONEGAP_FRAMEWORK
 #import <PhoneGap/PGPlugin.h>
