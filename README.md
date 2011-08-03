@@ -26,11 +26,11 @@ Alright, hold your horses.  Let me write the code first.
 Chill winston.
 
 ## Using the plugin 
-To use the plugin call the function ```window.plugins.wol.wake(macAddress, success, fail);``` somewhere in your JavaScript
+To use the plugin call the function ```window.plugins.wol.wake(macAddress, ipAddress, success, fail);``` somewhere in your JavaScript
 
 ### Example
 ```javascript
-window.plugins.wol.wake("00:00:00:00:00:00", function(success) {
+window.plugins.wol.wake("00:00:00:00:00:00", "192.168.1.255", function(success) {
         console.log("Success: "+success);
     }, function(fail) {
         console.log("There was an error: "+fail);
@@ -39,7 +39,7 @@ window.plugins.wol.wake("00:00:00:00:00:00", function(success) {
 ```
 
 ## Acknowledgements
-iOS code inspired heavily by [openwol](http://code.google.com/p/openwol/).
+iOS code inspired heavily by [openwol](http://code.google.com/p/openwol/), with code borrowed from [Ben Ripley](http://www.benripley.com/development/ios/udp-broadcasting-on-iphone-using-bsd-sockets/)
 
 iOS regex provided by [RegexKitLite](http://regexkit.sourceforge.net/RegexKitLite/index.html).
 
