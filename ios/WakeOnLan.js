@@ -17,23 +17,23 @@
  *
  *
  * Usage: 
- * window.plugins.wol.wake(macAddress, successCallback, failCallback);
+ * window.plugins.wol.wake(macAddress, ipAddress successCallback, failCallback);
  */
 
-var WakeOnLan = function() {}
+ var WakeOnLan = function() {}
 
-WakeOnLan.prototype.wake = function(mac, success, failure) {
-	console.log("Calling WakeOnLan.wake");
-	var options = {
-		macAddress: mac
-	}
-	PhoneGap.exec(success, failure, "WakeOnLan", "wake", [options]);
-}
+ WakeOnLan.prototype.wake = function(mac, ip, success, fail) {
+ 	console.log("Calling WakeOnLan.wake");
+ 	var options = {
+ 		macAddress: mac,
+ 		ipAddress: ip
+ 	}
+ 	PhoneGap.exec(success, fail, "WakeOnLan", "wake", [options]);
+ }
 
-
-PhoneGap.addConstructor(function() {
-	if(!window.plugins) {
-		window.plugins = {};
-	}
-	window.plugins.wol = new WakeOnLan();
-});
+ PhoneGap.addConstructor(function() {
+ 	if(!window.plugins) {
+ 		window.plugins = {};
+ 	}
+ 	window.plugins.wol = new WakeOnLan();
+ });

@@ -25,11 +25,10 @@
 #import "PGPlugin.h"
 #endif
 
-@interface WakeOnLan : PGPlugin {
-	
-}
+@interface WakeOnLan : PGPlugin {}
 
 - (void) wake:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
-- (BOOL) checkMACFormat:(NSString*)macAddress;
+- (NSData*) buildPayload:(NSString*)macAddress;
+- (NSData*) parseMac:(NSString*)macAddress;
 
 @end
