@@ -55,3 +55,6 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+## Disclaimer
+Whilst I have done everything I can to make this code as reliable as possible, it has never been submitted in an app that has gone through the approval process.  I cannot guarantee that the code will be approved.
