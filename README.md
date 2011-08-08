@@ -25,7 +25,7 @@ PGWakeOnLan is a [PhoneGap](http://www.phonegap.com) plugin that will send a [Wa
 ### Android
 1. Create the folder ```src/uk/co/ghosty/phonegap/plugins``` and place the WakeOnLan.java within it.
 2. Place the WakeOnLan.js in your www folder and link it into your project using a &lt;script&gt; tag.
-3. Add the following to your res/xml/plugins.xml ```&lt;plugin name="WakeOnLan" value="uk.co.ghosty.phonegap.plugins.WakeOnLan"/&gt;```
+3. Add the following to your res/xml/plugins.xml ```<plugin name="WakeOnLan" value="uk.co.ghosty.phonegap.plugins.WakeOnLan"/>```
 
 ## Using the plugin 
 To use the plugin call the function ```window.plugins.wol.wake(macAddress, ipAddress, success, fail);``` somewhere in your JavaScript
