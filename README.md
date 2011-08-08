@@ -11,19 +11,21 @@ PGWakeOnLan is a [PhoneGap](http://www.phonegap.com) plugin that will send a [Wa
 * RegexKitLite 4.0 (http://regexkit.sourceforge.net/RegexKitLite/index.html)
 
 ### Android
-Alright, hold your horses.  Let me write the code first.
+* Standard android stuffs.
 
 ## Adding the plugin to your project 
 
 ### iOS
-1. Place the WakeOnLan.h and WakeOnLan.m to your Plugins folder
-2. Place the WakeOnLan.js in your www folder and link it into your project using a &lt;script&gt; tag
-3. Download RegexKitLite and add it to your project
-4. Add the required librariy libicucore.dylib to your project
+1. Place the WakeOnLan.h and WakeOnLan.m to your Plugins folder.
+2. Place the WakeOnLan.js in your www folder and link it into your project using a &lt;script&gt; tag.
+3. Download RegexKitLite and add it to your project.
+4. Add the required librariy libicucore.dylib to your project.
 5. Open up your PhoneGap.plist file (in Resources) and add the key ```wakeonlan``` and the value ```WakeOnLan``` to the end of the plugins declaration.
 
 ### Android
-Chill winston.
+1. Create the folder ```src/uk/co/ghosty/phonegap/plugins``` and place the WakeOnLan.java within it.
+2. Place the WakeOnLan.js in your www folder and link it into your project using a &lt;script&gt; tag.
+3. Add the following to your res/xml/plugins.xml ```&lt;plugin name="WakeOnLan" value="uk.co.ghosty.phonegap.plugins.WakeOnLan"/&gt;```
 
 ## Using the plugin 
 To use the plugin call the function ```window.plugins.wol.wake(macAddress, ipAddress, success, fail);``` somewhere in your JavaScript
